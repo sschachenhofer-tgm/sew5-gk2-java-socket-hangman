@@ -36,7 +36,6 @@ public class HangmanServerSession extends Thread {
      *
      * @param   socket  The TCP Socket object used for communicating with the client
      * @param   highscores  An instance of HighscoreList managing the highscores table
-     * @author  Simon Schachenhofer
      * @since   2019-11-07
      */
     public HangmanServerSession(Socket socket, HighscoreList highscores) {
@@ -102,8 +101,6 @@ public class HangmanServerSession extends Thread {
      * @since   2019-11-08
      */
     private void handleLetterGuess(char guess) {
-        // TODO: Check if char is letter
-
         if (this.guessedChars.contains(guess)) {
             // The client already guessed for that character
             this.output(String.format("You already guessed '%s' - %d remaining tries. %s",
